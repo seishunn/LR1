@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Смирнов Никита</title>
+</head>
+<body>
+<script>
+  "use strict";
+  const a = parseFloat(prompt("Введите a", ""));
+  const b = parseFloat(prompt("Введите b", ""));
+  const x = parseFloat(prompt("Введите x", ""));
+  const y = parseFloat(prompt("Введите y", ""));
+  const z = parseFloat(prompt("Введите z", ""));
+
+  const solC = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  const solS = (a * b) / 2;
+  const solB = (Math.log(Math.sqrt(x) + Math.sqrt(y) + 2)) / Math.abs(2 * z);
+
+  document.write(`<p>Гипотенузу и площадь прямоугольного треугольника с катетами a, b</p>`);
+  document.write(`<img src="images/1img.png">`);
+  document.write(`<p>Ответ: С = ${solC}; S = ${solS};</p>`);
+
+  document.write(`<img src="images/2img.png">`);
+  document.write(`<p>Ответ: B = ${solB};</p>`);
+  document.write(`<p>Смирнов Никита</p>`);
+
+</script>
+</body>
+</html>

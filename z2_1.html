@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Смирнов Никита</title>
+</head>
+<body>
+<script>
+  "use strict";
+  let firstItem = parseFloat(prompt("Введите сумму первого товара", ""));
+  let secondItem = parseFloat(prompt("Введите сумму первого товара", ""));
+  const totalSum = firstItem + secondItem;
+  let totalSale = parseInt(prompt("Введите скидку", ""));
+  const saleSum = totalSum * (totalSale / 100);
+
+  if (totalSale > 5) {
+    totalSale = 5;
+  }
+  if (totalSale < 1) {
+    totalSale = 1;
+  }
+
+  document.write("<div style='max-width: 400px; width: 100%; margin: 0 auto; border: 2px solid #000; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .1)'>");
+  document.write("<p>ООО \"Евроторг\"</p>");
+  document.write("<p style='font-weight: 900; text-transform: uppercase; text-align: center'>Спасибо за покупку!</p>");
+  document.write(`<p>Дата покупки: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}</p>`);
+  document.write(`<p>Наименование товара: ${firstItem}</p>`);
+  document.write(`<p>Наименование товара: ${secondItem}</p>`);
+  document.write("<p style='font-weight: 900; text-transform: uppercase'>Итого</p>");
+  document.write(`<p style='font-weight: 900; text-transform: uppercase; text-align: center'>${totalSum} р.</p>`);
+  document.write(`<p>Ваша скидка: ${totalSale}%</p>`);
+  document.write(`<p style='font-weight: 900; text-transform: uppercase'>${saleSum.toFixed(2)} р.</p>`);
+  document.write("<p style='font-weight: 900; text-transform: uppercase'>Сумма со скидкой</p>");
+  document.write(`<p style='font-weight: 900; text-transform: uppercase; text-align: center'>${totalSum - saleSum.toFixed(2)} р.</p>`);
+  document.write("</div>");
+</script>
+</body>
+</html>
